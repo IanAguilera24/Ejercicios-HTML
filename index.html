@@ -9,18 +9,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
     <body>
+        <!-- contenido del header-->
         <header>
             <a href="index.html" class="brand">
                 <img class="Escom" src="../assets/img/EscudoESCOM1.png" alt="LogoEscom">
                 <img class="Ipn" src="../assets/img/Logo_IPN1.png" alt="LogoIpn">
             </a>
+            <!--Contenido del navbar-->
             <nav class="menu">
                 <div class="btn">
                     <i class="fas fa-times close-btn"></i>
                 </div>
                 <ul class="options">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">Informaci&oacute;n</a></li>
+                    <li><a href="#main-section">Home</a></li>
+                    <li><a href="#Info-section">Descripci&oacute;n</a></li>
                     <li><a href="">Ejercicios</a></li>
                 </ul>
             </nav>
@@ -28,20 +30,96 @@
                 <i class="fas fa-bars menu-btn"></i>
             </div>
         </header>
-        <section class="section-main">
+        <!--Contenido del main-->
+        <section class="section-main" id="main-section">
             <h1>Ejercicios HTML y JavaScript</h1>
         </section>
-        <section class="section-two">
-            <h2>Contenido</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo doloremque animi reprehenderit 
-                similique in atque, minus ducimus eaque quibusdam sapiente necessitatibus quia at itaque molestiae 
-                illo quisquam voluptate omnis. Eos.</p>
+        <!--Descripcion e informacion-->
+        <section class="section-two" id="Info-section">
+            <h1>Descripci&oacute;n</h1>
+            <p><br>Aqu&iacute; encontrar&aacute;s varios de los ejercicios hechos para la materia de Desarrollo de 
+                aplicaciones web, pertenecientes al grupo 4AM1 de la Licenciatura en ciencia de datos.
+            </p>
         </section>
+        <!--Galeria de ejercicios-->
         <section class="section-three">
-            <li><a href="html/par_o_impar.html">Par o Impar</a></li>
-            <li><a href="html/tabla_multiplicar.html">Tablas de multiplicar</a></li>
-            <li><a href="html/suma.html">Sumas</a></li>
-            <li><a href="html/mayor_de_array.html">Mayor de un Array</a></li>
+            <div class="galery" id="galery">
+                <div class="fila">
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-code-compare"></i>                    
+                        </div>
+                        <p class="description">Par o impar</p>     
+                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-xmark"></i>        
+                        </div>
+                        <p class="description">Tablas de multiplicar</p>    
+                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <p class="description">Sumas</p>
+                        <span class="lenguaje">HTML/JAVASCRIPT</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                        <p class="description">Mayor de un array</p>
+                        <span class="lenguaje">HTML/JAVASCRIPT</span>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-code-compare"></i>               
+                        </div>
+                        <p class="description">Generar arreglo C</p>       
+                        <span class="lenguaje">HTML/JAVASCRIPT</span>  
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-xmark"></i>               
+                        </div>
+                        <p class="description">Media</p>       
+                        <span class="lenguaje">HTML/JAVASCRIPT</span>   
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <p class="description">N&uacute;meros en orden</p>
+                        <span class="lenguaje">HTML/JAVASCRIPT</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <i class="fa-solid fa-greater-than"></i>
+                        </div>
+                        <p class="description">Datos de un texto</p>      
+                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
+                    </div>
+                </div>
+            </div>  
+            <!--Informacion del item seleccionado-->
+            <div class="seleccion" id="seleccion">
+                <div class="cerrar" onclick="cerrar()">
+                    &#x2715
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-code-compare" id="i"></i>
+                    <h2 id="description">Par o impar</h2>     
+                    <p id="information">C&oacute;digo para comprobar si el numero es par o impar</p>
+                    <span class="lenguaje" id="lenguaje">HTML/JAVASCRIPT</span>     
+                    <div class="fila">
+                        <button>Ir al ejercicios</button>
+                    </div>
+                </div>
+            </div>     
         </section>
         <footer class="footer-main">
             <div class="group1">
@@ -55,8 +133,8 @@
                 </div>
                 <div class="box">
                     <h2>Sobre Nosotros</h2>
-                    <p>ESCOM IPN, Unidad Profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, 07320 Ciudad de México, CDMX</p>
-                    <p>D.R. Instituto Politécnico Nacional (IPN). Av. Luis Enrique Erro S/N, Unidad Profesional Adolfo López Mateos, Zacatenco, Delegación Gustavo A. Madero, C.P. 07738, Ciudad de México </p>
+                    <p>ESCOM IPN Licenciatura en ciencia de datos.</p>
+                    <p>Aguilera M&aacute;rquez Ian Alexis. Grupo: 4AM1</p>
                 </div>
                 <div class="box">
                     <h2>Contacto</h2>
@@ -75,3 +153,14 @@
 </html>
 <script src="../assets/js/index.js"></script>
 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/0073addce8.js" crossorigin="anonymous"></script>
+
+            <!--<span class="information">C&oacute;digo para comprobar si el numero es par o impar</span>
+            <span class="information">C&oacute;digo para generar las tablas de multiplicar</span>
+            <span class="information">C&oacute;digo para sumar dos n&uacute;meros</span>
+            <span class="information">C&oacute;digo para obtener la posici&oacute;n del n&uacute;mero mayor</span>
+
+            <span class="information">C&oacute;digo para generar un arreglo C dados A y B</span>
+            <span class="information">C&oacute;digo para calcular la media de una secuencia de n&uacute;meros</span>
+            <span class="information">C&oacute;digo para ordenar n&uacute;meros le&iacute;dos</span>
+            <span class="information">C&oacute;digo para obtener las caracter&iacute;sticas de un texto</span>-->
