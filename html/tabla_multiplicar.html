@@ -2,36 +2,9 @@
 <html>
   <head>
     <title>Tablas de multiplicar</title>
-    <script>
-        function generaTabla() {
-                // Solicitar al usuario que ingrese un número
-                let numero = document.getElementById("numero").value;
-
-                // Convertir el número a entero
-                const num = parseInt(numero);
-
-                // Verificar si el número ingresado es un número válido
-                if (isNaN(num)) {
-                    alert("Ingrese un número válido");
-                } else {
-                    // Crear una variable para almacenar la tabla de multiplicar
-                    var tabla = "";
-
-                    // Generar la tabla de multiplicar usando un bucle for
-                    for (let i = 1; i <= 10; i++) {
-                        tabla += `${num} x ${i} = ${num * i}<br>`;
-                    }
-
-                    // Mostrar la tabla de multiplicar en una ventana de alerta
-                    // alert(`La tabla de multiplicar de ${num} es:\n\n${tabla}`);
-
-                    var resultado = document.getElementById("resultado");
-                    resultado.innerHTML = "La tabla de multiplicar de " + num + " es: <br>" + tabla;
-
-                }
-            }
-  
-      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div class="texto">
@@ -43,3 +16,4 @@
     <div id="resultado"></div>
   </body>
 </html>
+<script src="../assets/js/tabla_multiplicar.js"></script>
