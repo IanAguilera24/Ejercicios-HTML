@@ -31,38 +31,26 @@ closeBtn.addEventListener("click", () => {
     menu.classList.remove('active');
 })
 
-//Codigo para la galeria de ejercicios
-let galery = document.getElementById("galery");
-let seleccion = document.getElementById("seleccion");
-let iSeleccionada = document.getElementById("i");
-let description = document.getElementById("description");
-let information = document.getElementById("information");
-let lenguaje = document.getElementById("lenguaje");
+//funcionamiento de la seccion de ejercicios y su preview
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
 
-function cargar(item){
-    quitarBordes();
-    galery.style.width = "60%";
-    seleccion.style.width = "40%";
-    seleccion.style.opacity = "1";
-    item.style.border = "2px solid red";
+document.querySelectorAll('.product-container .product').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
 
-    iSeleccionada.src = item.getElementsByTagName("i")[0].src;
-    description.innerHTML =  item.getElementsByTagName("p")[0].innerHTML;
-
-    information.innerHTML = "Informacion del codigo ";
-
-    lenguaje.innerHTML =  item.getElementsByTagName("span")[0].innerHTML;
-}
-
-function cerrar(){
-    galery.style.width = "100%";
-    seleccion.style.width = "0%";
-    seleccion.style.opacity = "0";
-    quitarBordes();
-}
-function quitarBordes(){
-    var items = document.getElementsByClassName("item");
-    for(i=0;i <items.length; i++){
-        items[i].style.border = "none";
-    }
-}
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});

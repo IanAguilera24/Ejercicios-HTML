@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
 /*Formato de la pagina*/
 *{
-    margin: auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 body{
@@ -63,7 +74,7 @@ header .brand{
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
+    /*text-decoration: none;*/
     letter-spacing: 2px;
 }
 
@@ -90,7 +101,7 @@ header .menu a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 16px;
-    text-decoration: none;
+    /*text-decoration: none;*/
     margin: 0 30px;
     padding: 7px 12px;
     border-radius: 20px;
@@ -106,7 +117,22 @@ header .menu  a:hover {
 .section-two{
     padding: 20px;
     text-align: center;
-    font-size: 20px;
+}
+
+.section-two h3{
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-two p{
+    font-size: 1.5rem;
+    color: #444;
+    
+    text-transform: uppercase;
+    text-align: center;
 }
 
 header .btn{
@@ -116,117 +142,153 @@ header .btn{
     display: none;
 }
 
-/*Galeria de ejercicios*/
-.section-three{
+/*Seccion de los ejercicios*/
+.container{
     max-width: 1200px;
-    width: 100%;
-    margin: 40px auto;
-    display: flex;
+    margin: 0 auto;
+    padding: 3rem 2rem;
 }
 
-.galery{
-    width: 100%;
-    transition: 0.5s ease;
-}
-
-.galery .fila{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.galery .fila .item{
-    max-width: 170px;
-    padding: 30px;
-    height: 230px;
+.container .title{
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
     text-align: center;
-    margin: 0 10px;
+}
+
+.container .subtitle{
+    font-size: 2.0rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .product-container .product{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    outline: 0.1rem solid #ccc;
+    outline-offset: -1.5rem;
     cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
 }
 
-.galery .fila .item:hover{
-    background-color: #e6e6e6;
+.container .product-container .product:hover{
+    outline: 0.2rem solid #222;
+    outline-offset: 0;
 }
 
-.galery .fila .item i{
+.container .product-container .product img{
+    height: 10rem;
+}
+
+.container .product-container .product:hover img{
+    transform: scale(0.9);
+}
+
+.container .product-container .product h3{
+    padding: 0.5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .product-container .product:hover h3{
+    color: #27ae60;
+}
+
+.container .product-container .product .lenguaje{
+    font-size: 2rem;
+    color: #444;
+}
+
+.products-preview{
+    position: fixed;
+    top: 0; 
+    left: 0;
+    min-height: 100vh;
     width: 100%;
-    margin: 30px 0;
-}
-
-.galery .fila .item .description{
-    color: #707070;
-    font-weight: bold;
-}
-
-.galery .fila .item .lenguaje{
-    color: #f85151;
-    font-weight: bold;
-    font-size: 10px;
-}
-
-.seleccion{
-    transition: 0.5s ease;
-    opacity: 0;
-    width: 0%;
-    border: 1px solid #ccc;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
-.cerrar{
+.products-preview .preview{
+    display: none;
+    padding: 0.5rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 0.5rem;
+    width: 35rem;
+}
+
+.products-preview .preview.active{
+    display: inline-block;
+}
+
+.products-preview .preview img{
+    height: 7rem;
+}
+
+.products-preview .preview .fa-times{
     position: absolute;
-    right: 0;
-    top: 20px;
-    right: 20px;
+    top: 1rem;
+    right: 1.5rem;
     cursor: pointer;
+    color: #444;
+    font-size: 3rem;
 }
 
-.info{
-    padding: 20px;
+.products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
 }
 
-.info i{
-    display: block;
-    margin: 10px auto;
-    width: 80%;
+.products-preview .preview h3{
+    color: #444;
+    padding: 0.5rem 0;
+    font-size: 2rem;
 }
 
-.info h2{
-    color: #707070;
-    margin-bottom: 10px;
+.products-preview .preview p{
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #777;
 }
 
-.info p{
-    font-size: 13px;
-    color: #707070;
-    margin-bottom: 10px;
+.products-preview .preview .lenguaje{
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #27ae60;
 }
 
-.info .lenguaje{
-    font-size: 10px;
-    font-weight: bold;
-    color: #f85151;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.info .fila{
+.products-preview .preview .button{
     display: flex;
-    align-items: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.info .fila button{
-    height: 40px;
-    border: none;
-    padding: 0 10px;
+.products-preview .preview .button a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: 0.1rem solid #444;
+}
+
+.products-preview .preview .button a:hover{
+    background: #444;
     color: #fff;
-    background-color: #f85151;
 }
 
 /*Contenido del Footer*/
@@ -273,7 +335,7 @@ header .btn{
 
 .footer-main .group1 .red-social a{
     display: inline-block;
-    text-decoration: none;
+    /*text-decoration: none;*/
     width: 45px;
     height: 45px;
     line-height: 45px;
@@ -297,6 +359,9 @@ header .btn{
 
 /*Modificacion en funcion del dispositivo*/
 @media (max-width: 991px){
+    html{
+        font-size: 55%;
+     }
     header, header.down{
         padding: 20px 40px;
     }
@@ -340,3 +405,15 @@ header .btn{
         line-height: 60px;
     }
 }
+
+@media (max-width:768px){
+    .products-preview .preview img{
+       height: 25rem;
+    }
+ }
+ 
+ @media (max-width:450px){
+    html{
+       font-size: 50%;
+    }
+ }

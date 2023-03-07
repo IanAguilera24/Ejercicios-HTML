@@ -23,7 +23,7 @@
                 <ul class="options">
                     <li><a href="#main-section">Home</a></li>
                     <li><a href="#Info-section">Descripci&oacute;n</a></li>
-                    <li><a href="">Ejercicios</a></li>
+                    <li><a href="#Ejer-section">Ejercicios</a></li>
                 </ul>
             </nav>
             <div class="btn">
@@ -36,91 +36,142 @@
         </section>
         <!--Descripcion e informacion-->
         <section class="section-two" id="Info-section">
-            <h1>Descripci&oacute;n</h1>
-            <p><br>Aqu&iacute; encontrar&aacute;s varios de los ejercicios hechos para la materia de Desarrollo de 
-                aplicaciones web, pertenecientes al grupo 4AM1 de la Licenciatura en ciencia de datos.
+            <h3>Descripci&oacute;n</h3>
+            <p>Aqu&iacute; podr&aacute;s encontrar todos de los ejercicios que ser&aacute;n realizados
+                durante el curso de la materia de Desarrollo de aplicaciones web, pertenecientes al grupo 
+                4AM1 de la Licenciatura en ciencia de datos.
             </p>
         </section>
         <!--Galeria de ejercicios-->
-        <section class="section-three">
-            <div class="galery" id="galery">
-                <div class="fila">
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-code-compare"></i>                    
-                        </div>
-                        <p class="description">Par o impar</p>     
-                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-xmark"></i>        
-                        </div>
-                        <p class="description">Tablas de multiplicar</p>    
-                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                        <p class="description">Sumas</p>
-                        <span class="lenguaje">HTML/JAVASCRIPT</span>
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-greater-than"></i>
-                        </div>
-                        <p class="description">Mayor de un array</p>
-                        <span class="lenguaje">HTML/JAVASCRIPT</span>
-                    </div>
+        <div class="container" id="Ejer-section">
+            <h3 class="title">Ejercicios</h3>
+            <h4 class="subtitle">1er Parcial</h4>
+            <div class="product-container">
+                <div class="product" data-name="p-1">
+                    <img src="assets/img/compare.png" alt="Par o impar">
+                    <h3>Par o impar</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
                 </div>
-                <div class="fila">
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-code-compare"></i>               
-                        </div>
-                        <p class="description">Generar arreglo C</p>       
-                        <span class="lenguaje">HTML/JAVASCRIPT</span>  
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-xmark"></i>               
-                        </div>
-                        <p class="description">Media</p>       
-                        <span class="lenguaje">HTML/JAVASCRIPT</span>   
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                        <p class="description">N&uacute;meros en orden</p>
-                        <span class="lenguaje">HTML/JAVASCRIPT</span>
-                    </div>
-                    <div class="item" onclick="cargar(this)">
-                        <div class="contenedor-foto">
-                            <i class="fa-solid fa-greater-than"></i>
-                        </div>
-                        <p class="description">Datos de un texto</p>      
-                        <span class="lenguaje">HTML/JAVASCRIPT</span> 
-                    </div>
+                <div class="product" data-name="p-2">
+                    <img src="assets/img/multiplication.png" alt="Tablas de multiplicar">
+                    <h3>Tablas de multiplicar</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
                 </div>
-            </div>  
-            <!--Informacion del item seleccionado-->
-            <div class="seleccion" id="seleccion">
-                <div class="cerrar" onclick="cerrar()">
-                    &#x2715
+                <div class="product" data-name="p-3">
+                    <img src="assets/img/plus.png" alt="sumas">
+                    <h3>Sumas</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
                 </div>
-                <div class="info">
-                    <i class="fa-solid fa-code-compare" id="i"></i>
-                    <h2 id="description">Par o impar</h2>     
-                    <p id="information">C&oacute;digo para comprobar si el numero es par o impar</p>
-                    <span class="lenguaje" id="lenguaje">HTML/JAVASCRIPT</span>     
-                    <div class="fila">
-                        <button>Ir al ejercicios</button>
-                    </div>
+                <div class="product" data-name="p-4">
+                    <img src="assets/img/is-equal-to-or-greater-than.png" alt="mayor de un array">
+                    <h3>Mayor de un arreglo</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
                 </div>
-            </div>     
-        </section>
+                <div class="product" data-name="p-5">
+                    <img src="assets/img/edit.png" alt="Generar un arreglo">
+                    <h3>Generar un arreglo</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
+                </div>
+                <div class="product" data-name="p-6">
+                    <img src="assets/img/numbers.png" alt="media">
+                    <h3>Media</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
+                </div>
+                <div class="product" data-name="p-7">
+                    <img src="assets/img/business.png" alt="Numeros Ordenados">
+                    <h3>N&uacute;meros ordenados</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
+                </div>
+                <div class="product" data-name="p-8">
+                    <img src="assets/img/skill-development.png" alt="Info de un texto">
+                    <h3>Infor de un texto</h3>
+                    <div class="lenguaje">HTML & JAVASCRIPT</div>
+                </div>
+            </div>
+        </div>
+        <!--Preview de los ejercicios-->
+        <div class="products-preview">
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/compare.png" alt="Par o impar">
+                <h3>Par o impar</h3>
+                <p>C&oacute;digo para comprobar si el numero es par o impar</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-2">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/multiplication.png" alt="Tablas de multiplicar">
+                <h3>Tablas de multiplicar</h3>
+                <p>C&oacute;digo para generar las tablas de multiplicar</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-3">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/plus.png" alt="sumas">
+                    <h3>Sumas</h3>
+                <p>C&oacute;digo para sumar dos n&uacute;meros</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-4">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/is-equal-to-or-greater-than.png" alt="mayor de un array">
+                <h3>Mayor de un arreglo</h3>
+                <p>C&oacute;digo para obtener la posici&oacute;n del n&uacute;mero mayor</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-5">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/edit.png" alt="Generar un arreglo">
+                <h3>Generar un arreglo</h3>
+                <p>C&oacute;digo para generar un arreglo C dados A y B</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-6">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/numbers.png" alt="media">
+                <h3>Media</h3>
+                <p>C&oacute;digo para calcular la media de una secuencia de n&uacute;meros</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-7">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/business.png" alt="Numeros Ordenados">
+                <h3>N&uacute;meros ordenados</h3>
+                <p>C&oacute;digo para ordenar n&uacute;meros le&iacute;dos</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+            <div class="preview" data-target="p-8">
+                <i class="fas fa-times"></i>
+                <img src="assets/img/skill-development.png" alt="Info de un texto">
+                <h3>Infor de un texto</h3>
+                <p>C&oacute;digo para obtener las caracter&iacute;sticas de un texto</p>
+                <div class="lenguaje">HTML & JAVASCRIPT</div>
+                <div class="button">
+                    <a href="" class="irEjer">Ir al ejercicio</a>
+                </div>
+            </div>
+        </div>
         <footer class="footer-main">
             <div class="group1">
                 <div class="box">
@@ -151,16 +202,6 @@
         </footer>
     </body>
 </html>
-<script src="../assets/js/index.js"></script>
+<script src="../assets/js/index.js" defer></script>
 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/0073addce8.js" crossorigin="anonymous"></script>
-
-            <!--<span class="information">C&oacute;digo para comprobar si el numero es par o impar</span>
-            <span class="information">C&oacute;digo para generar las tablas de multiplicar</span>
-            <span class="information">C&oacute;digo para sumar dos n&uacute;meros</span>
-            <span class="information">C&oacute;digo para obtener la posici&oacute;n del n&uacute;mero mayor</span>
-
-            <span class="information">C&oacute;digo para generar un arreglo C dados A y B</span>
-            <span class="information">C&oacute;digo para calcular la media de una secuencia de n&uacute;meros</span>
-            <span class="information">C&oacute;digo para ordenar n&uacute;meros le&iacute;dos</span>
-            <span class="information">C&oacute;digo para obtener las caracter&iacute;sticas de un texto</span>-->
